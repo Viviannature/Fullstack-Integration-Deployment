@@ -1,0 +1,120 @@
+✅ Capstone Project: Movie Recommendation App
+🎯 Objective
+Create a responsive full-stack web application that allows users to search for movies, receive personalized recommendations, and manage their movie preferences.
+
+🚀 Core Features Breakdown
+1. 🔐 User Authentication
+* Frontend (React):
+o Registration and login forms
+o Use axios to send credentials to backend
+
+* Backend (Express.js):
+o Secure password handling using bcrypt
+o JWT-based authentication using jsonwebtoken
+
+* Endpoints:
+o POST /api/auth/register
+o POST /api/auth/login
+o GET /api/user/profile (protected route)
+
+2. 🎬 Movie Discovery
+* Use The Movie Database (TMDB) API:
+o API Key setup
+o Use endpoints like /search/movie, /movie/popular, etc.
+
+* Frontend Features:
+o Search bar (filter by title, genre, year)
+o Filter/sort UI (rating, popularity)
+o Movie detail modal/page (poster, overview, rating, etc.)
+
+3. 👤 User Features
+
+* Favorites & Watchlist:
+o Users can save movies (stored in MongoDB)
+o Create custom watchlist names
+
+* Ratings & Reviews:
+o Allow users to rate/review movies
+o CRUD operations on reviews
+
+* Profile Management:
+o Edit username, email, profile picture
+
+🛠️ Technical Stack
+
+| Layer        | Tech                                               |
+| ------------ | -------------------------------------------------- |
+| Frontend     | React, Axios, TailwindCSS or Material UI           |
+| Backend      | Node.js, Express.js                                |
+| Database     | MongoDB + Mongoose                                 |
+| External API | TMDB API                                           |
+| Deployment   | Netlify/Vercel (frontend), Render/Heroku (backend) |
+| Auth         | JWT, bcrypt                                        |
+
+
+📅 Timeline & Milestones
+
+Week 14: Setup & Basic Features
+* Project scaffolding (React + Express)
+* MongoDB setup (Atlas)
+* Create TMDB integration
+* Build search and movie detail components
+
+Week 15: Advanced Features & Authentication
+* Implement user auth (register/login/logout)
+* JWT tokens and secure routes
+* Save favorites & watchlist
+* Rating/review system
+
+Week 16: Polish & Deployment
+* Finalize UI styling
+* Ensure mobile responsiveness
+* Deploy frontend to Netlify or Vercel
+* Deploy backend to Render or Heroku
+* Set up CI/CD using GitHub Actions (optional)
+
+🚀 Deployment
+* Frontend:
+Deploy React app to Netlify or Vercel
+
+* Backend:
+Use Render or Heroku for Express server
+
+* Environment Variables:
+Store TMDB API key, JWT secret, MongoDB URI securely
+
+* CI/CD (Stretch Goal):
+GitHub Actions to auto-deploy on main branch push
+
+Stretch Goals
+* Social features (Follow other users, see their watchlists)
+* Personalized recommendations using genres or collaborative filtering
+* Movie trailer embedding via YouTube API or TMDB video endpoint
+* PWA (Progressive Web App) for offline support and installability
+
+📁 Suggested Folder Structure
+/client       → React frontend
+  /src
+    /components
+    /pages
+    /services (API calls)
+    /context (auth, user state)
+/server       → Express backend
+  /routes
+  /controllers
+  /models
+  /middleware
+  /config (DB, API keys)
+.env          → secrets
+
+✅ Final Notes
+Make sure to:
+
+Use GitHub for version control and commit regularly
+
+Write clean, modular code with proper error handling
+
+Test your API routes with Postman
+
+Document your API endpoints and features (README)
+
